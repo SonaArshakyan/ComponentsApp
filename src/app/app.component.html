@@ -1,0 +1,32 @@
+<!-- Toolbar -->
+<ng-container *ngIf="IsUserloggedin else signIn">
+<app-login>
+  <h2 >{{UserName}}</h2>    
+  <button>Logout</button>
+</app-login>
+</ng-container>
+
+<ng-template #signIn>
+  <app-login>
+    <h2 ></h2>    
+    <button>Login</button>
+  </app-login>
+ </ng-template>
+
+
+<div class="content" role="main">
+<br>
+   <!-- Courses -->
+  <h2>Courses</h2>
+  <p>Here are some links to help you get started:</p>
+ 
+  <br>
+  <div class="container">  
+    <app-courses></app-courses>
+  </div>
+  <!-- Footer -->
+  <footer>
+    
+  </footer>
+
+</div>
