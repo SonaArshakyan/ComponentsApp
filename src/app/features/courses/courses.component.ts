@@ -3,12 +3,7 @@ import {Course} from 'src/app/models/course';
 
 @Component({
   selector: 'app-courses',
-  template: `
-    <ng-container *ngFor="let course of courses" class="">
-    <app-course  [course]="course"  [editable]="editable"></app-course>
-    </ng-container>
- <div >
-  ` ,
+  templateUrl:"./courses.component.html"  ,
 })
 export class CoursesComponent {
   courses: Course[];

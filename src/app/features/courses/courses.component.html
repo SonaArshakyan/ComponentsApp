@@ -1,3 +1,5 @@
+
+ <ng-container *ngFor="let course of courses" class="">
   <div class="row courseCard">    
     <div class="col-8"> 
       <div class="card" style="border: none;" >
@@ -11,7 +13,7 @@
       <ul>
         <li><b>Authors :</b> {{course.Authors}}</li>
         <li><b>Duration :</b>{{course.Duration}} </li>
-        <li><b>Created :</b> {{course.Created | date: 'dd-MM-yyyy'}} </li>
+        <!-- <li><b>Created :</b> {{course.Created | date: 'dd-MM-yyyy'}} </li> -->
       </ul> 
       <button class="showCoursebtn"> Show course </button>
       <ng-container *ngIf="editable">        
@@ -19,3 +21,5 @@
         </ng-container>
     </div>
   </div>
+</ng-container>
+
