@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
-import { LoginComponent } from '../features/login/login.component';
-import { CoursesComponent } from '../features/courses/courses.component';
-import { CourseComponent } from '../features/courses/course.component';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginModule } from '../features/login/login.module';
+import { CoursesModule } from '../features/courses/courses.module'; 
 
 @NgModule({
-  declarations: [
-    CoursesComponent,LoginComponent,CourseComponent
+  declarations: [ 
   ],
-  exports:[
- CoursesComponent, LoginComponent ,CourseComponent],
-  imports: [ CommonModule,FontAwesomeModule
+  exports:[ CommonModule,FontAwesomeModule, LoginModule, CoursesModule
+     ],
+  imports: [ CommonModule,FontAwesomeModule, LoginModule, CoursesModule
   ],
   providers: [],
 })
