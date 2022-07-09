@@ -15,7 +15,7 @@
         <li><b>Duration :</b>{{course.Duration}} </li>
         <!-- <li><b>Created :</b> {{course.Created | date: 'dd-MM-yyyy'}} </li> -->
       </ul> 
-      <button class="showCoursebtn"> Show course </button>
+      <button class="showCoursebtn">{{courseBtnChildTitle}}</button>
       <ng-container *ngIf="editable">        
        <button>Edit</button> 
         </ng-container>

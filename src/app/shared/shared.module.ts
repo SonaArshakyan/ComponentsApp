@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LoginModule } from '../features/login/login.module';
-import { CoursesModule } from '../features/courses/courses.module'; 
-
+import 'src/app/shared/components/index';
 @NgModule({
   declarations: [ 
   ],
-  exports:[ CommonModule,FontAwesomeModule, LoginModule, CoursesModule
+  exports:[ CommonModule,FontAwesomeModule
      ],
-  imports: [ CommonModule,FontAwesomeModule, LoginModule, CoursesModule
+  imports: [ CommonModule,FontAwesomeModule
   ],
   providers: [],
 })

@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'ComponentsApp';
   UserName = "Sona";
   IsUserloggedin = true;
+  courseBtnParentTitle = 'Show course';
 }

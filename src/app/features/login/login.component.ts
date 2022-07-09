@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core'; 
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,5 +7,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class LoginComponent {
-    MyImageSvg  = 'assets/img/logo.svg';     
+    MyImageSvg  = 'assets/img/logo.svg';
 }

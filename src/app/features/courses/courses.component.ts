@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'; 
+import { Component , Input} from '@angular/core'; 
 import {Course} from 'src/app/models/course';
 
 @Component({
@@ -7,6 +7,7 @@ import {Course} from 'src/app/models/course';
 })
 export class CoursesComponent {
   courses: Course[];
+  @Input() courseBtnChildTitle = '';   
   editable: boolean = false;
 constructor() {
     this.courses =  [
