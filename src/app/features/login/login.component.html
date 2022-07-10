@@ -1,10 +1,17 @@
-<div class="toolbar" role="banner">
-    <div>
-        <img src="{{MyImageSvg}}" alt="">
-    </div>
-    <div class="spacer"></div>
-    <ng-content select="h2"></ng-content>                 
-    <ng-content select="button"></ng-content>            
-</div>
-  
+<form (ngSubmit)="LoginUser">    
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" [(ngModel)]="email" #Email="ngModel">
 
+    <div *ngIf="Email.errors?.['emailValidator']">
+        Email is required
+      </div>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" [(ngModel)]="password" #Pass="ngModel">
+    <div *ngIf="Pass.errors?.['required']">
+        Password is required
+      </div>
+        
+    <button type="submit">Sign Up</button>
+  </form>
+  

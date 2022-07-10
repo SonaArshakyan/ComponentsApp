@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import 'src/app/shared/components/index';
+import { EmailValidatorDirective } from './directives/email-validator.direvtive';
+
 @NgModule({
   declarations: [ 
   ],
@@ -9,6 +11,6 @@ import 'src/app/shared/components/index';
      ],
   imports: [ CommonModule,FontAwesomeModule
   ],
-  providers: [],
+  providers: [EmailValidatorDirective],
 })
 export class SharedModule { }

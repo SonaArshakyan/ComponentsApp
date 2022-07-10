@@ -1,18 +1,20 @@
 <!-- Toolbar -->
-<ng-container *ngIf="IsUserloggedin else signIn">
-<app-login>
-  <h2 >{{UserName}}</h2>    
-  <button>Logout</button>
-</app-login>
-</ng-container>
 
-<ng-template #signIn>
-  <app-login>
-    <h2 ></h2>    
-    <button>Login</button>
-  </app-login>
- </ng-template>
+<div class="toolbar" role="banner">
+  <div>
+      <img src="{{MyImageSvg}}" alt="">
+  </div>
+  <div class="spacer"></div> 
+    <ng-container *ngIf="IsUserloggedin else signIn">
+        <h2 >{{UserName}}</h2>    
+          <button>Logout</button>
+    </ng-container>
 
+    <ng-template #signIn>
+          <h2 ></h2>    
+           <button>Login</button>
+     </ng-template>
+  </div>
 
 <div class="content" role="main">
 <br>
