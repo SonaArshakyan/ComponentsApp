@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import 'src/app/shared/components/index';
-import { EmailValidatorDirective } from './directives/email-validator.direvtive';
+import { EmailValidatorDirective } from './directives/email-validator.directive'; 
 
 @NgModule({
-  declarations: [ 
+  declarations: [ EmailValidatorDirective
   ],
-  exports:[ CommonModule,FontAwesomeModule
+  exports:[ CommonModule,FontAwesomeModule , EmailValidatorDirective
      ],
   imports: [ CommonModule,FontAwesomeModule
   ],
-  providers: [EmailValidatorDirective],
+  providers: [],
 })
 export class SharedModule { }

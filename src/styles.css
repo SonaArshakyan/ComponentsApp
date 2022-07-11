@@ -81,6 +81,13 @@
     border: 5px solid green;
     margin-bottom: 20px;
   }
+  .course-section h2  {
+    text-align: center;
+  }
+  .course-section p {
+    text-align: center;
+    margin-bottom: 8px;
+  }
   .showCoursebtn{
     border: 5px solid #b888e5;
     background: none;

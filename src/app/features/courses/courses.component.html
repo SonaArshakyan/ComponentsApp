@@ -1,25 +1,32 @@
 
- <ng-container *ngFor="let course of courses" class="">
-  <div class="row courseCard">    
-    <div class="col-8"> 
-      <div class="card" style="border: none;" >
-        <div class="card-body" >
-        <p class="cardName">{{ course.Name }} </p>
-        <p>{{ course.Text }}</p>
-        </div>
-      </div>   
+<div class="course-section">
+  <h2>Courses</h2>
+  <p>Here are some links to help you get started:</p>
+  <ng-container *ngFor="let course of courses" class="">
+    <div class="row courseCard">    
+      <div class="col-8"> 
+        <div class="card" style="border: none;" >
+          <div class="card-body" >
+          <p class="cardName">{{ course.Name }} </p>
+          <p>{{ course.Text }}</p>
+          </div>
+        </div>   
+      </div>
+      <div class="col-3">  
+        <ul>
+          <li><b>Authors :</b> {{course.Authors}}</li>
+          <li><b>Duration :</b>{{course.Duration}} </li>
+          <!-- <li><b>Created :</b> {{course.Created | date: 'dd-MM-yyyy'}} </li> -->
+        </ul> 
+        <button class="showCoursebtn">{{courseBtnChildTitle}}</button>
+        <ng-container *ngIf="editable">        
+         <button>Edit</button> 
+          </ng-container>
+      </div>
     </div>
-    <div class="col-3">  
-      <ul>
-        <li><b>Authors :</b> {{course.Authors}}</li>
-        <li><b>Duration :</b>{{course.Duration}} </li>
-        <!-- <li><b>Created :</b> {{course.Created | date: 'dd-MM-yyyy'}} </li> -->
-      </ul> 
-      <button class="showCoursebtn">{{courseBtnChildTitle}}</button>
-      <ng-container *ngIf="editable">        
-       <button>Edit</button> 
-        </ng-container>
-    </div>
-  </div>
-</ng-container>
+  </ng-container>
+</div>
+
+
+
 

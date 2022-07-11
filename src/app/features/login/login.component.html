@@ -1,17 +1,42 @@
-<form (ngSubmit)="LoginUser">    
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email" [(ngModel)]="email" #Email="ngModel">
+<div class="login-section">
+     <h2>Login</h2>
+  <div class="loginForm">
+      <form (ngSubmit)="LoginUser">   
 
-    <div *ngIf="Email.errors?.['emailValidator']">
-        Email is required
-      </div>
+         <label for="email">Email
+          <br>
+            <input emailValidator placeholder="Email" required type="text" name="email" id="email" [(ngModel)]="email" #Email="ngModel">
+         </label>
+          
+         <div *ngIf="Email.errors?.['emailValidator']" class="error">
+          Email is invalid
+          </div>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" [(ngModel)]="password" #Pass="ngModel">
-    <div *ngIf="Pass.errors?.['required']">
-        Password is required
-      </div>
-        
-    <button type="submit">Sign Up</button>
-  </form>
+          <div *ngIf="Email.errors?.['required']" class="error">
+            Email is required
+            </div>  
+
+          <label for="password">Password
+            <br>
+              <input  placeholder="Password" type="password" name="password" id="password" [(ngModel)]="password" #Pass="ngModel" required minlength="4">
+          </label>
+
+         <div *ngIf="Pass.errors?.['required']" class="error">
+           Password is required
+         </div>
+
+         <div *ngIf="Pass.errors?.['minlength']" class="error">
+          Password must be at least 4 characters long.
+        </div>
+          <br>
+           
+      <button type="submit">Sign Up</button>
+
+    </form>
+  </div>
+ 
+
+</div>
+
+
   
