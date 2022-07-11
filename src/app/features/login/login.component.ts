@@ -7,8 +7,14 @@ import { NgForm } from '@angular/forms';
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class LoginComponent {
-  email = '';
-  password ='';
-  LoginUser(form: NgForm) {
-    console.log(form.value); }
+  submitted=false;
+  formModel: FormModel = new FormModel();
+    LoginUser(formModel :FormModel) {
+      this.submitted = true;
+      console.log(formModel)
+    }
+ }
+ export class FormModel {
+  email: string ='';
+  password:string='';
  }
