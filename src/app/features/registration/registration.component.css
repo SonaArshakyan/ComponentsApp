@@ -1,0 +1,14 @@
+.registration-section{
+    border: 2px solid lightblue;
+}
+.registration-section h2{
+    text-align: center;
+}
+.registrationForm{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 50px 0;
+}
+.error{
+    color: red;
+}

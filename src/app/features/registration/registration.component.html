@@ -1,0 +1,44 @@
+<div class="registration-section">
+    <h2>Registration</h2>
+ <div class="registrationForm">
+     <form [formGroup]="registrForm" (ngSubmit)="RegistrUser()">
+
+        <label for="name"> Name
+            <br>
+              <input  placeholder="Name"  type="text"  id="name" formControlName="Name">
+         </label> <br>
+         <small class="error" *ngIf="registrFormControls.Name.errors?.minlength">
+          Name must contain min 6 letter
+         </small>
+          <small class="error" *ngIf="registrFormControls.Name.errors?.required && submitted">
+            Name is required
+           </small>
+         <br>
+
+        <label for="email">Email
+         <br>
+           <input  placeholder="Email"  type="text"  id="email" formControlName="Email" >
+         </label> <br>
+         <small class="error" *ngIf="registrFormControls.Email.errors?.emailValidator">
+          Email is not valid
+         </small>
+         <small class="error" *ngIf="registrFormControls.Email.errors?.required  && submitted">
+            Email is required
+           </small>
+         <br>
+
+         <label for="password">Password
+           <br>
+             <input  placeholder="Password" type="password"  id="password" formControlName="Password">
+         </label> <br>
+         <small class="error" *ngIf="registrFormControls.Password.errors?.required && submitted">
+            Password is required
+           </small>
+         <br> <br>
+
+     <button type="submit">Registration</button>
+
+   </form>
+ </div>
+
+</div>
