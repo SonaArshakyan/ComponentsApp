@@ -7,8 +7,14 @@ import {Course} from 'src/app/models/course';
 })
 export class CoursesComponent {
   courses: Course[];
-  @Input() courseBtnChildTitle = '';   
+  @Input() courseBtnChildTitle = '';
+  searchPlaceHolder = "Search course by Name";   
   editable: boolean = false;
+  getCourse(course: string) {
+    debugger;
+    var data = this.courses.filter(x => x.Name === course);
+   this.courses =  data;
+  }
 constructor() {
     this.courses =  [
       {

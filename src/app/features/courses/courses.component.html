@@ -2,6 +2,9 @@
 <div class="course-section">
   <h2>Courses</h2>
   <p>Here are some links to help you get started:</p>
+
+ <app-search [searchPlaceHolder]="searchPlaceHolder" (searchItemEvent)="getCourse($event)"> </app-search>
+
   <ng-container *ngFor="let course of courses" class="">
     <div class="row courseCard">    
       <div class="col-8"> 

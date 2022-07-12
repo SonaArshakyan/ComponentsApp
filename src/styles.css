@@ -99,6 +99,14 @@
   color: #44176d;
   font-size: 30px;
   }
+  .searcSection{
+    padding: 15px;
+    border: 2px solid orange;
+    margin-bottom: 8px;
+  }
+   .search{
+   width: 100%;
+  }
 
   footer a {
     display: flex;
