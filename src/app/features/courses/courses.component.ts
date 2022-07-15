@@ -10,10 +10,8 @@ export class CoursesComponent {
   @Input() courseBtnChildTitle = '';
   searchPlaceHolder = "Search course by Name";   
   editable: boolean = false;
-  getCourse(course: string) {
-    debugger;
-    var data = this.courses.filter(x => x.Name === course);
-   this.courses =  data;
+  getCourse(name: string) {
+  this.courses.filter(({ Name }: Course) => name === Name)
   }
 constructor() {
     this.courses =  [

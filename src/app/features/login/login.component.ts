@@ -14,7 +14,7 @@ export class LoginComponent {
       console.log(formModel)
     }
  }
- export class FormModel {
+  class FormModel {
   email: string ='';
   password:string='';
  }

@@ -6,7 +6,6 @@ import {RegistrationComponent} from './registration.component'
 @NgModule({
   declarations: [ RegistrationComponent ],
   imports: [SharedModule, ReactiveFormsModule],
-  providers: [],
   exports:[ RegistrationComponent]
 })
 export class RegistrationModule { }
