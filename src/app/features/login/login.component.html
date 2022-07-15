@@ -1,10 +1,41 @@
-<div class="toolbar" role="banner">
-    <div>
-        <img src="{{MyImageSvg}}" alt="">
-    </div>
-    <div class="spacer"></div>
-    <ng-content select="h2"></ng-content>                 
-    <ng-content select="button"></ng-content>            
-</div>
-  
+<div class="login-section">
+     <h2>Login</h2>
+  <div class="loginForm">
+      <form (ngSubmit)="LoginUser(formModel)">
 
+         <label for="email">Email
+          <br>
+            <input emailValidator placeholder="Email" required type="text" name="email" id="email" [(ngModel)]="formModel.email" #Email="ngModel">
+         </label>
+          <br>
+         <small *ngIf="Email.errors?.['emailValidator']" class="error">
+          Email is invalid
+          </small>
+          <small *ngIf="Email.errors?.['required'] && submitted" class="error">
+            Email is required
+            </small>  
+          <br>
+
+          <label for="password">Password
+            <br>
+              <input  placeholder="Password" type="password" name="password" id="password" [(ngModel)]="formModel.password" #Pass="ngModel" required minlength="4">
+          </label>
+          <br>
+         <small *ngIf="Pass.errors?.['required'] && submitted" class="error">
+           Password is required
+         </small>
+         <small *ngIf="Pass.errors?.['minlength']" class="error">
+          Password must be at least 4 characters long.
+        </small>
+          <br>
+           
+      <button type="submit">Login</button>
+
+    </form>
+  </div>
+ 
+
+</div>
+
+
+  

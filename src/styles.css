@@ -45,6 +45,32 @@
     margin: 0;
     padding: 0;
   }
+  .spacer {
+    flex: 1;
+  }
+  .toolbar {
+    position: absolute;
+    padding: 0 20px 0 20px ;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;   
+    border: 2px solid red;
+    font-weight: 600;
+    color: brown;
+  }
+ .toolbar button{
+    border: 5px solid #b888e5;
+    background: none;
+    margin-left: 10px;
+    padding: 5px;
+ }
+  .toolbar img {
+    margin: 0 5px;
+  }
+  
   footer {
     margin-top: 8px;
     display: flex;
@@ -54,6 +80,13 @@
   .courseCard{
     border: 5px solid green;
     margin-bottom: 20px;
+  }
+  .course-section h2  {
+    text-align: center;
+  }
+  .course-section p {
+    text-align: center;
+    margin-bottom: 8px;
   }
   .showCoursebtn{
     border: 5px solid #b888e5;
@@ -65,6 +98,14 @@
  .cardName{
   color: #44176d;
   font-size: 30px;
+  }
+  .searcSection{
+    padding: 15px;
+    border: 2px solid orange;
+    margin-bottom: 8px;
+  }
+   .search{
+   width: 100%;
   }
 
   footer a {

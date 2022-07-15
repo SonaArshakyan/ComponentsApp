@@ -1,0 +1,9 @@
+    
+    <div class=" row searcSection">
+        <div class = "col-9">
+            <input  placeholder={{searchPlaceHolder}} type="text" name="search"  class = "search" id="search" [(ngModel)]="search">
+        </div>
+        <div class = "col-3">
+            <button  (click)="searchItem(search)">Search</button>
+        </div>
+    </div>
