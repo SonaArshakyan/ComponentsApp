@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError , BehaviorSubject, Subscription } from 'rxjs';
+import { Observable, of, map, throwError , BehaviorSubject, Subscription } from 'rxjs';
 import { SessionStorage } from './session-storage.service';
 import { TokenService } from './token-service';
 
 
-@Injectable()
+@Injectable({ providedIn: 'root'})
 export class AuthService {
     private isAuthorized$$: BehaviorSubject<boolean> = new BehaviorSubject(false);
     public readonly isAuthorized$: Observable<boolean> = this.isAuthorized$$.asObservable();
-    
+    private isloggedIn: boolean = false;
+
     constructor(
     private sessionStorageService: SessionStorage,
     private tokenService: TokenService
@@ -18,23 +19,24 @@ export class AuthService {
     const accessToken = this.tokenService.generateToken(email, password);
 
     this.sessionStorageService.setToken(accessToken);
-    this.isAuthorized$.subscribe( () => {return  true; });
+
+    this.isAuthorized$.pipe(map(() => { this.isloggedIn =  true; }))
    } 
  
    logout() : void  {
    this.sessionStorageService.deleteToken();
 
-    this.isAuthorized$.subscribe( () => {return false; });
+   this.isAuthorized$.pipe(map(() => { this.isloggedIn =  false; }))
   }  
    
   register(email: string, password: string , name: string) : void  {
     const accessToken = this.tokenService.generateToken(email, password);
     this.sessionStorageService.setToken(accessToken);
 
-    this.isAuthorized$.subscribe( () => {return  true; });
+    this.isAuthorized$.pipe(map(() => { this.isloggedIn =  true; }))
    }
    
-   isUserAuthorized() : Subscription{
-   return this.isAuthorized$.subscribe();
+   isUserAuthorized() : boolean  {
+      return this.isloggedIn;
    }
 }

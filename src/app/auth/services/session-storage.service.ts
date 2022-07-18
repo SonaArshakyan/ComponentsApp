@@ -1,9 +1,9 @@
 import { Inject, Injectable}  from '@angular/core';
 import { DOCUMENT } from "@angular/common";
 
-@Injectable()
+@Injectable({ providedIn: 'root'})
 export class SessionStorage {
-    constructor(@Inject('Window') private window: any) {} 
+    constructor() {} 
 
   setToken(token: string) {
     sessionStorage.setItem('token', token );
