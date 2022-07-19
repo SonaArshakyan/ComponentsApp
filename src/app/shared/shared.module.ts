@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[ CommonModule,FontAwesomeModule , EmailValidatorDirective , SearchComponent,AppRoutingModule
      ],
-  imports: [ CommonModule,FontAwesomeModule, FormsModule, AppRoutingModule,RouterModule
+  imports: [ CommonModule,FontAwesomeModule, FormsModule, AppRoutingModule
   ],
   providers: [],
 })

@@ -10,6 +10,6 @@ constructor(private authService: AuthService, private router: Router)
 {}
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): ( boolean | UrlTree )
     {
-        return this.authService.isUserAuthorized() ? this.router.createUrlTree(['/courses']) : true;
+        return this.authService.isUserAuthorized() ? this.router.parseUrl('/courses') : true;
     } 
 }
