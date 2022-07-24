@@ -7,11 +7,15 @@ import { CoursesModule } from './features/courses/courses.module';
 import { RegistrationModule } from './features/registration/registration.module';
 import {AuthModule} from '../app/auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { effects, reducers } from './store/Index';
 @NgModule({
   declarations: [AppComponent
   ],
   imports: [
-    BrowserModule,SharedModule ,CoursesModule, LoginModule, RegistrationModule,AuthModule ,AppRoutingModule],
+    BrowserModule,SharedModule ,CoursesModule, LoginModule, RegistrationModule,AuthModule ,AppRoutingModule, 
+    StoreModule.forRoot(reducers), EffectsModule.forRoot([effects])],
   providers: [],
   bootstrap: [AppComponent ]
 })
