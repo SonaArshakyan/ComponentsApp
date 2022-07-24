@@ -1,7 +1,7 @@
 <div class="login-section">
      <h2>Login</h2>
   <div class="loginForm">
-      <form (ngSubmit)="LoginUser(formModel)">
+      <form (ngSubmit)="LoginUser(formModel)" id='loginForm'>
 
          <label for="email">Email
           <br>
@@ -21,20 +21,18 @@
               <input  placeholder="Password" type="password" name="password" id="password" [(ngModel)]="formModel.password" #Pass="ngModel" required minlength="4">
           </label>
           <br>
-         <small *ngIf="Pass.errors?.['required'] && submitted" class="error">
+         <small *ngIf="(Pass.errors?.['required'] && submitted)"  class="error">
            Password is required
          </small>
          <small *ngIf="Pass.errors?.['minlength']" class="error">
           Password must be at least 4 characters long.
         </small>
-          <br>
-           
-      <button type="submit">Login</button>
-
+          <br>           
+      <button type="submit" routerLink="/courses" > Login</button>
     </form>
   </div>
  
-
+  <router-outlet></router-outlet>
 </div>
 
 

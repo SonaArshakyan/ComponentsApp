@@ -12,7 +12,7 @@
 
     <ng-template #signIn>
           <h2 ></h2>    
-           <button>Login</button>
+           <button><a routerLink="/login" routerLinkActive="">Login</a></button>
      </ng-template>
   </div>
 
@@ -22,7 +22,7 @@
   <div class="container">  
 
   <!-- Courses -->
-  <app-courses [courseBtnChildTitle]="courseBtnParentTitle"></app-courses>
+  <!-- <app-courses [courseBtnChildTitle]="courseBtnParentTitle"></app-courses> -->
 
   <!-- Login -->
   <!-- <app-login></app-login> -->
@@ -35,5 +35,5 @@
   <footer>
     
   </footer>
-
+  <router-outlet></router-outlet>
 </div>

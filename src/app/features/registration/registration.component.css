@@ -7,7 +7,7 @@
 .registrationForm{
     display: flex;
     justify-content: center;
-    padding: 50px 0 50px 0;
+    padding: 50px 60px 50px 60px;
 }
 .error{
     color: red;
