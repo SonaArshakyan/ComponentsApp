@@ -6,12 +6,12 @@ import { LoginModule } from './features/login/login.module';
 import { CoursesModule } from './features/courses/courses.module'; 
 import { RegistrationModule } from './features/registration/registration.module';
 import {AuthModule} from '../app/auth/auth.module';
-
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [AppComponent
   ],
   imports: [
-    BrowserModule,SharedModule ,CoursesModule, LoginModule, RegistrationModule,AuthModule],
+    BrowserModule,SharedModule ,CoursesModule, LoginModule, RegistrationModule,AuthModule ,AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent ]
 })

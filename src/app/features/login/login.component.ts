@@ -1,5 +1,4 @@
-import { Component, ViewEncapsulation,ViewChild ,ElementRef } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AuthService } from 'src/app/auth/services/auth.service';
 @Component({
   selector: 'app-login',
