@@ -8,11 +8,11 @@ import {Course} from 'src/app/models/course';
 export class CoursesComponent {
   courses: Course[];
   @Input() courseBtnChildTitle = '';
-  searchPlaceHolder = "Search course by Name";   
+  searchPlaceHolder = "Search course by Name";
   editable: boolean = false;
   getCourse(name: string) {
-  this.courses.filter(({ Name }: Course) => name === Name)
-  }
+this.courses = this.courses.filter(x => x.Name === name);
+ }
 constructor() {
     this.courses =  [
       {
