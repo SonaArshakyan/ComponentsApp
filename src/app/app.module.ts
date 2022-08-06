@@ -10,12 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { effects, reducers } from './store/Index';
+import { AuthorModule } from './store/authors/authors.module';
 @NgModule({
   declarations: [AppComponent
   ],
   imports: [
     BrowserModule,SharedModule ,CoursesModule, LoginModule, RegistrationModule,AuthModule ,AppRoutingModule, 
-    StoreModule.forRoot(reducers), EffectsModule.forRoot([effects])],
+    [StoreModule.forRoot(reducers), AuthorModule], EffectsModule.forRoot([effects])],
   providers: [],
   bootstrap: [AppComponent ]
 })
