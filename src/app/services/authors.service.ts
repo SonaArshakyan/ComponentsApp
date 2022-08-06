@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
 import { Author } from '../models/authors';
 
-@Injectable()
+@Injectable({    
+    providedIn: 'root'    
+  }) 
 export class AuthorsService {
-    authors: Author[];
+    private authors: Author[];
 
   getAllAuthors(): Observable<Author[]> {
    return new Observable(obs => obs.next(this.authors));
