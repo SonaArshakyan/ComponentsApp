@@ -29,6 +29,9 @@ export class AuthorsStoreService {
           this.authors$$.next(this.subscription);
           this.isLoading$$.next(true);
       }
+      ngOnDestroy() {
+        this.subscription.unsubscribe()
+    }
 
     getAllAuthors(): Observable<any> {
         return this.authorsService.getAllAuthors();
